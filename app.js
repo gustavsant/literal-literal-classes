@@ -20,7 +20,7 @@ class Elf extends Person {
 
 class Orc extends Person {
   constructor(classs, str, dex, int) {
-    super(classs, str * 2, dex * 0.8, int * 0.2)
+    super(classs, str * 2, dex * 0.8, int * 0)
   }
 }
 
@@ -29,6 +29,10 @@ const Wizard = new Elf('Wizard', 10, 20, 70)
 const Warrior = new Orc('Warrior', 80, 10, 10)
 
 const Archer = new Human('Archer', 20, 60, 20)
-console.log(Archer)
-console.log(Warrior)
-console.log(Wizard)
+
+let wiz = document.querySelector('.wizard')
+let wizStats = document.createElement('p')
+wizStats.innerText = `Inteligencia do mago: ${Wizard.int}`
+wiz.appendChild(wizStats)
+let war = document.querySelector('.warrior')
+let arc = document.querySelector('.archer')
